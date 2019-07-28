@@ -1,12 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const DefaultHeader = props => {
   return (
-    <header>
+    <header className="page-header">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">
-          Virtusa Assignment
-        </Link>
+        <span className="navbar-brand">Virtusa Assignment</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,25 +19,20 @@ const DefaultHeader = props => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/products">
+                Products
+              </NavLink>
+            </li>
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/user">
+                Users
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
-              </a>
+              <NavLink className="nav-link" to="/dashboard">
+                Dashboard
+              </NavLink>
             </li>
           </ul>
         </div>
