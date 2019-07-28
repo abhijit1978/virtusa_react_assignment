@@ -15,6 +15,7 @@ class App extends Component {
       <React.Fragment>
         <DefaultHeader />
         <div className="container">
+          <ProductList />
           <Switch>
             <Route exact path="/login" component={LoginRegistration} />
             <Route path="/products/:id" component={ProductDetails} />

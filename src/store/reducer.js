@@ -1,8 +1,16 @@
 const initialstate = {
-  products: 0
-};
-const reducer = (state = initialstate, action) => {
-  return state;
+  userInfo: {}
 };
 
-export default reducer;
+const loginReducer = (state = initialstate, action) => {
+  switch (action.type) {
+    case "loginAction":
+      return { ...state };
+    case "loginActionSuccess":
+      return { ...state, userInfo: action.payload };
+    case "loginActionError":
+      return { ...state };
+  }
+};
+
+export default loginReducer;
