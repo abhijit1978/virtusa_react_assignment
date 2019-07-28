@@ -16,7 +16,7 @@ class App extends Component {
         <DefaultHeader />
         <div className="container">
           <Switch>
-            <Route path="/login" component={LoginRegistration} />
+            <Route exact path="/login" component={LoginRegistration} />
             <Route path="/products/:id" component={ProductDetails} />
             <Route exact path="/products" component={ProductList} />
             <Route path="/users/:id" component={UserDetails} />

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Product from "./product";
+import { connect } from "react-redux";
 
 class ProductList extends Component {
   state = {
@@ -63,7 +64,7 @@ class ProductList extends Component {
   }
 
   render() {
-    const { products } = this.state;
+    const { products } = this.props;
     return (
       <div className="row">
         {products.map(product => (
@@ -74,4 +75,9 @@ class ProductList extends Component {
   }
 }
 
-export default ProductList;
+const mapStateToProps = state => {
+  return {
+    products: state.products
+  };
+};
+export default connect(mapStateToProps)(ProductList);

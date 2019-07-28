@@ -17,13 +17,13 @@ const ProductDetails = props => {
       <p>{product.description}</p>
       <p>
         <button
-          onClick={() => props.onHandleEditProduct(product._id)}
+          onClick={() => handleEditProduct(product._id)}
           className="btn btn-sm btn-outline-primary m-2"
         >
           Edit Product
         </button>
         <button
-          onClick={() => props.onHandleEditProduct(product._id)}
+          onClick={() => handleDeleteProduct(product._id)}
           className="btn btn-sm btn-outline-danger m-2"
         >
           Delete Product

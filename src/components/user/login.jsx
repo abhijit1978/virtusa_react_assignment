@@ -1,12 +1,12 @@
 import React from "react";
 
 const Login = props => {
-  handleLoginFormSubmit = () => {};
+  // handleLoginFormSubmit = () => {};
 
   return (
     <div className="col-sm">
       <h3>User Login</h3>
-      <form onSubmit={handleLoginFormSubmit}>
+      <form>
         <div className="form-group">
           <label htmlFor="loginEmail">Email address</label>
           <input
@@ -16,7 +16,7 @@ const Login = props => {
             id="loginEmail"
             aria-describedby="emailHelp"
             placeholder="Enter email"
-            onChange={() => handleLoginFormChange(event, newValue)}
+            onChange={console.log("hello")}
             value=""
           />
         </div>
@@ -28,7 +28,7 @@ const Login = props => {
             className="form-control"
             id="loginPassword"
             placeholder="Password"
-            onChange={() => handleLoginFormChange(event, newValue)}
+            onChange={console.log("hello")}
             value=""
           />
         </div>
@@ -42,3 +42,9 @@ const Login = props => {
 };
 
 export default Login;
+
+// onSubmit={handleLoginFormSubmit}
+
+// () => handleLoginFormChange(event, newValue)
+
+//() => handleLoginFormChange(event, newValue)

@@ -1,9 +1,19 @@
 import React from "react";
 
 const Registration = () => {
-  handleRegistrationFormChange = (event, newValue) => {
+  const handleRegistrationFormChange = (event, newValue) => {
     console.log(event);
-    console.log(newValue);
+    console.log("newValue");
+  };
+
+  const handlePasswordMatch = (event, newValue) => {
+    console.log("event");
+    console.log("newValue");
+  };
+
+  const handleRegistrationFormSubmit = () => {
+    console.log("event");
+    console.log("newValue");
   };
 
   return (
@@ -18,7 +28,7 @@ const Registration = () => {
             className="form-control"
             id="fullName"
             placeholder="Enter full name"
-            onChange={() => handleRegistrationFormChange(event, newValue)}
+            onChange={() => handleRegistrationFormChange()}
             value=""
           />
         </div>
@@ -31,7 +41,7 @@ const Registration = () => {
             id="registrationEmail"
             aria-describedby="emailHelp"
             placeholder="Enter email"
-            onChange={() => handleRegistrationFormChange(event, newValue)}
+            onChange={() => handleRegistrationFormChange()}
             value=""
           />
         </div>
@@ -43,7 +53,7 @@ const Registration = () => {
             className="form-control"
             id="registrationPassword"
             placeholder="Password"
-            onChange={() => handleRegistrationFormChange(event, newValue)}
+            onChange={() => handleRegistrationFormChange()}
             value=""
           />
         </div>
@@ -55,7 +65,7 @@ const Registration = () => {
             className="form-control"
             id="registrationConfirmPassword"
             placeholder="Confirm Password"
-            onChange={() => handleRegistrationFormChange(event, newValue)}
+            onChange={() => handleRegistrationFormChange()}
             value=""
             onBlur={handlePasswordMatch}
           />
